@@ -1,0 +1,66 @@
+<!--
+Author: Colorlib
+Author URL: https://colorlib.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>S'inscrire</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="csssigneup.css" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		
+		<div class="main-agileinfo">
+			<h1>S'Inscrire</h1>
+			<div class="agileits-top">
+				<form action="#" method="post">
+					<input class="text" type="text" name="nom" placeholder="&#xf007; Nom" required="" >
+					<input class="text w3lpass" type="text" name="prenom" placeholder="&#xf007; Prénom" required="">
+					<input class="text w3lpass" type="text" name="adresse" placeholder="&#xf3c5; Adresse" required="">
+					<input class="text email" type="email" name="email" placeholder="&#xf0e0; Email" required="">
+					<input class="text" type="password" name="password" placeholder="&#xf084; Mot de passe" required="">
+					<input class="text w3lpass" type="password" name="password" placeholder="&#xf023; Confirmer le mot de passe" required="">
+					<input class="text w3lpass" type="tel" name="tel" placeholder="&#xf095; Tel" required="" >
+					<span style="margin-left: 14px; color: #000137; font-size: 1.50em;">&#xf3e0;</span> <label for="photo">Sélectionner une photo</label><span class="file-name"></span> <input class="text w3lpass"type="file" name="photo" accept=".jpg, .jpeg, .png" required="" id="photo">
+					<div class="wthree-text">
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="VALIDER">
+				</form>
+				<p>Avez-vous un compte? <a href="#"> Connecte-vous maintenant!</a></p>
+			</div>
+		</div>
+		
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+	<script>
+		const file = document.querySelector('#photo');
+	file.addEventListener('change', (e) => {
+	  const [file] = e.target.files;
+	  const { name: fileName, size } = file;
+	  const fileSize = (size / 1000).toFixed(2);
+	  const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+	  document.querySelector('.file-name').textContent = fileNameAndSize;
+	});
+	</script>
+</body>
+</html>
